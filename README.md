@@ -6,7 +6,7 @@
 ## API Documentation
 
 ### 1. Get All Exams
-**Function:** Fetches and returns a list of all exams stored in the database. It returns a JSON array containing exam details (ID, name, date, and duration).
+**Function:** Fetches and returns a list of all exams stored in the array. It returns a JSON array containing exam details (ID, name, date, and duration).
 
 **Endpoint:** `GET /exams`  
 **Response:**
