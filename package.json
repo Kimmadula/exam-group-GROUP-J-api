@@ -1,0 +1,24 @@
+{
+  "name": "exam-group-group-j-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kimmadula/exam-group-GROUP-J-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kimmadula/exam-group-GROUP-J-api/issues"
+  },
+  "homepage": "https://github.com/Kimmadula/exam-group-GROUP-J-api#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
