@@ -32,6 +32,33 @@ router.post('/', (req, res) => {
     res.status(201).json(newExam);
   });
 
+  // Member 3: PUT /exams/:id - Update an exam by id
+router.put('/:id', (req, res) => {
+    const examId = parseInt(req.params.id);
+    const updatedData = req.body;
+  
+    // Validate that the required fields exist (name, date, and duration)
+    if (!updatedData.name || !updatedData.date || !updatedData.duration) {
+      return res.status(400).send('Name, date, and duration are required');
+    }
+  
+    // Validate that duration is a number
+    if (isNaN(updatedData.duration)) {
+      return res.status(400).send('Duration must be a number');
+    }
+  
+    // Find the exam by id
+    const examIndex = exams.findIndex(exam => exam.id === examId);
+  
+    if (examIndex === -1) {
+      return res.status(404).send('Exam not found');
+    }
+  
+    // Update the exam
+    exams[examIndex] = { ...exams[examIndex], ...updatedData };
+    res.json(exams[examIndex]);
+  });
+  
 
 
 module.exports = router;
