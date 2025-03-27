@@ -6,6 +6,8 @@
 ## API Documentation
 
 ### 1. Get All Exams
+**Function:** Fetches and returns a list of all exams stored in the database. It returns a JSON array containing exam details (ID, name, date, and duration).
+
 **Endpoint:** `GET /exams`  
 **Response:**
   ```json
@@ -15,6 +17,8 @@
   ]
 ```
 ### 2. Create New Exams
+**Function:** Adds a new exam to the system. The client sends an exam object (name, date, duration) in the request body.
+
 **Endpoint:** `POST /exams`  
 **Request:**
 ```json
@@ -25,6 +29,8 @@
  { "id": 3, "name": "History Exam", "date": "2025-05-10", "duration": 150 }
 ```
 ### 3. Update Exams
+**Function:** Modifies an existing exam’s details. The client sends an updated exam object, including the ID of the exam to be modified.
+
 **Endpoint:** `PUT /exams`  
 **Request:**
 ```json
